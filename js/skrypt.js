@@ -1,17 +1,12 @@
-//const btn_start = document.querySelector(".btn-start button");
-
 const btn_start = document.getElementById("start-btn");
 const info_box = document.querySelector(".box");
 const info_btn = document.getElementById("info-box-next");
 const questions = document.querySelector(".question-box");
 const title = document.getElementById("title");
 const question = document.getElementById("question");
-/*const option1 = document.getElementById("option1");
-const option2 = document.getElementById("option2");
-const option3 = document.getElementById("option3");
-const option4 = document.getElementById("option4"); */
 const which_que = document.getElementById("which-que");
 const next_que = document.getElementById("next-que");
+
 let options_list = [];
 options_list[0] = document.getElementById("option1");
 options_list[1] = document.getElementById("option2");
@@ -38,43 +33,24 @@ showQue = () => {
 }
 
 options_list[0].onclick = () => {
-    if(options_list[0].innerText == question_list[que_number].answer)
-    {
-        alert("ok");
-        correct_ans++;
-    }else{
-        alert("nie ok");
-    }
-    que_number++;
-    showQue();
+    option(options_list[0]);
 }
 
 options_list[1].onclick = () => {
-    if(options_list[1].innerText == question_list[que_number].answer)
-    {
-        alert("ok");
-        correct_ans++;
-    }else{
-        alert("nie ok");
-    }
-    que_number++;
-    showQue();
+    option(options_list[1]);
 }
 
 options_list[2].onclick = () => {
-    if(options_list[2].innerText == question_list[que_number].answer)
-    {
-        alert("ok");
-        correct_ans++;
-    }else{
-        alert("nie ok");
-    }
-    que_number++;
-    showQue();
+    option(options_list[2]);
 }
 
 options_list[3].onclick = () => {
-    if(options_list[3].innerText == question_list[que_number].answer)
+    option(options_list[3]);
+}
+
+function option(option_list)
+{
+    if(option_list.innerText == question_list[que_number].answer)
     {
         alert("ok");
         correct_ans++;
@@ -83,81 +59,11 @@ options_list[3].onclick = () => {
     }
     que_number++;
     showQue();
+
 }
-
-
-/*next_que.onclick = () => {
-    setOption();
-} 
-
-function setOption(){
-    for(let i=0;i<=que_number;i++)
-    {
-        alert(i);
-        options_list[que_number].onclick = () => {
-            if(options_list[que_number].innerText = question_list[que_number].answer)
-            {
-                alert("ok");
-            }else {
-                alert("nie ok");
-            }
-            que_number++;
-            showQue();
-        }
-    }
-}
-*/
-
-/* option2.onclick = () => {
-    if(option2.innerText == question_list[que_number].answer)
-    {
-        alert("ok");
-        correct_ans++;
-    }else{
-        alert("nie ok");
-    }
-    que_number++;
-    showQue();
-}
-
-
-
-
-option1.onclick = () => {
-    if(option1.innerText == question_list[que_number].answer)
-    {
-        alert("ok");
-    }else{
-        alert("nie ok");
-    }
-    que_number++;
-    showQue();
-}
-option3.onclick = () => {
-    if(option3.innerText == question_list[que_number].answer)
-    {
-        alert("ok");
-    }else{
-        alert("nie ok");
-    }
-    que_number++;
-    showQue();
-}
-option4.onclick = () => {
-    if(option4.innerText == question_list[que_number].answer)
-    {
-        alert("ok");
-    }else{
-        alert("nie ok");
-    }
-    que_number++;
-    showQue();
-} */
 
 info_btn.onclick = () => {
     info_box.classList.remove("visible");
     questions.classList.remove("hidden");
     showQue();
 }
-
-

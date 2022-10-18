@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="start-btn"><button id="start-btn">Start quiz</button></div>
+
+    <div class="info-box hidden box">
+        Informacje o quizie <br>
+        1.Quiz składa się z 5 pytań <br>
+        2.Do wyboru jest 4 odpowiedzi <br>
+        i tylko jedna jest prawdziwa <br>
+        3.Na odpowiedź masz 15 sekund <br>
+        Powodzenia !!! <br>
+        <button id="info-box-next">Dalej</button>
+    </div>
+
+    <div class="question-box box hidden">
+        <div id="title">
+            Quiz
+        </div><hr>
+
+        <div id="question"></div>
+
+        <div id="option1" class="frame">s</div>
+
+        <div id="option2" class="frame">s</div>
+
+        <div id="option3" class="frame">s</div>
+
+        <div id="option4" class="frame">s</div>
+
+        <span id="which-que"></span>
+        
+        <span id="next-que"><button>Dalej</button></span>
+
+    </div>
+
+    <div class="result-box">
+
+    </div>
+
+
+    <script src="js/skrypt.js"></script>
+
+    <script src="js/questions.js"></script>
+    
+</body>
+</html>

@@ -22,7 +22,7 @@ btn_start.onclick = () => {
     info_box.classList.add("visible");
 }
 
-showQue = () => {
+function showQue() {
     
     question.innerHTML = question_list[que_number].question;
     option1.innerHTML = question_list[que_number].options[0];
@@ -30,6 +30,7 @@ showQue = () => {
     option3.innerHTML = question_list[que_number].options[2];
     option4.innerHTML = question_list[que_number].options[3];
     
+    which_que.innerText = "Question: " + (que_number+1) + "/5";
 }
 
 options_list[0].onclick = () => {
@@ -54,11 +55,12 @@ function option(option_list)
     {
         alert("ok");
         correct_ans++;
+        option_list.classList.add("correct");
     }else{
         alert("nie ok");
+        option_list.classList.add("incorrect");
     }
     que_number++;
-    showQue();
 
 }
 
@@ -66,4 +68,15 @@ info_btn.onclick = () => {
     info_box.classList.remove("visible");
     questions.classList.remove("hidden");
     showQue();
+}
+
+next_que.onclick = () => {
+    for(let i=0;i<=3;i++)
+    {
+        options_list[i].classList.remove("correct");
+        options_list[i].classList.remove("incorrect");
+    }
+    showQue();
+   
+    
 }

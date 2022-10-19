@@ -100,3 +100,33 @@ body{
 .frame:hover{
 	background-color: #a8dadc;
 }
+
+.correct{
+    animation: correct 1s step-start infinite;
+}
+
+.incorrect{
+    animation: incorrect 1s step-start infinite;
+}
+
+#next-que{
+    float: right;
+}
+
+@keyframes correct {
+    50%{
+        opacity: 0;
+    }
+    100%{
+        background-color: green;
+    }
+}
+
+@keyframes incorrect{
+    50%{
+        opacity: 0;
+    }
+    100%{
+        background-color: red;
+    }
+}

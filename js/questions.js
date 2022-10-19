@@ -1,7 +1,7 @@
 let question_list = [
     {
     numb: 1,
-    question: "What does HTML stand for?",
+    question: "Co oznacza skrót HTML ?",
     answer: "Hyper Text Markup Language",
     options: [
       "Hyper Text Preprocessor",
@@ -12,7 +12,7 @@ let question_list = [
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
+    question: "Co oznacza skrót CSS ?",
     answer: "Cascading Style Sheet",
     options: [
       "Common Style Sheet",
@@ -23,7 +23,7 @@ let question_list = [
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
+    question: "Co oznacza skrót PHP ?",
     answer: "Hypertext Preprocessor",
     options: [
       "Hypertext Preprocessor",
@@ -34,7 +34,7 @@ let question_list = [
   },
     {
     numb: 4,
-    question: "What does SQL stand for?",
+    question: "Co oznacza skrót SQL ?",
     answer: "Structured Query Language",
     options: [
       "Stylish Question Language",
@@ -45,7 +45,7 @@ let question_list = [
   },
     {
     numb: 5,
-    question: "What does XML stand for?",
+    question: "Co oznacza skrót XML ?",
     answer: "eXtensible Markup Language",
     options: [
       "eXtensible Markup Language",

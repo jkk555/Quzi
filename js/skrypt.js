@@ -6,6 +6,7 @@ const title = document.getElementById("title");
 const question = document.getElementById("question");
 const which_que = document.getElementById("which-que");
 const next_que = document.getElementById("next-que");
+const result_box = document.getElementById("result-box");
 
 let options_list = [];
 options_list[0] = document.getElementById("option1");
@@ -23,7 +24,8 @@ btn_start.onclick = () => {
 }
 
 function showQue() {
-    
+    if(que_number<5)
+    {
     question.innerHTML = question_list[que_number].question;
     option1.innerHTML = question_list[que_number].options[0];
     option2.innerHTML = question_list[que_number].options[1];
@@ -31,6 +33,16 @@ function showQue() {
     option4.innerHTML = question_list[que_number].options[3];
     
     which_que.innerText = "Question: " + (que_number+1) + "/5";
+    }
+    else{
+    question.innerHTML = "";
+    option1.innerHTML = "";
+    option2.innerHTML = "";
+    option3.innerHTML = "";
+    option4.innerHTML = "";
+    which_que.innerHTML = "";
+    next_que.classList.add("hidden");
+    }
 }
 
 options_list[0].onclick = () => {
@@ -53,11 +65,9 @@ function option(option_list)
 {
     if(option_list.innerText == question_list[que_number].answer)
     {
-        alert("ok");
         correct_ans++;
         option_list.classList.add("correct");
     }else{
-        alert("nie ok");
         option_list.classList.add("incorrect");
     }
     que_number++;
@@ -78,5 +88,4 @@ next_que.onclick = () => {
     }
     showQue();
    
-    
 }

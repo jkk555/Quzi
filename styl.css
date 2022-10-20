@@ -1,6 +1,7 @@
 :root{
-	--backgroud-color: #e63946;
-	--text-color: #1d3557;
+	--backgroud-color: #ED7B84;
+	--text-color: black;
+	--question-box-bg-color: #F5DBCB;
 	--btn-color: #696D7D;
 	--btn-background: #bab1ba;
 }
@@ -15,27 +16,27 @@ body{
     left: 50%;
 }
 
-.start-btn button{
-	box-shadow: 5px 4px 0px 0px #899599;
-	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+.btn {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
 	background-color:#ededed;
-	border-radius:15px;
-	border:1px solid #d6bcd6;
+	border-radius:13px;
+	border:2px solid #dcdcdc;
 	display:inline-block;
 	cursor:pointer;
-	color:#696D7D;
+	color:#777777;
 	font-family:Times New Roman;
 	font-size:20px;
 	font-weight:bold;
-	padding:14px 36px;
+	padding:9px 27px;
 	text-decoration:none;
-	text-shadow:0px 0px 0px #e1e2ed;
+	text-shadow:0px 1px 0px #ffffff;
 }
-.start-btn button:hover {
-	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-	background-color:#bab1ba;
+.btn:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
 }
-.start-btn button:active {
+.btn:active {
 	position:relative;
 	top:1px;
 }
@@ -49,16 +50,16 @@ body{
 }
 
 .box{
-    font-size: 20px;
+    font-size: 25px;
     color: var(--text-color);
-    background-color: #ffffff;
+    
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 30%;
     width: 20%;
     height: auto;
     padding: 4em;
-	border: 10px solid #a8dadc;
+	
 }
 
 .info-box button{
@@ -77,28 +78,26 @@ body{
 	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
 	background-color:#bab1ba;
 }
-.question-box hr{
-	
-	box-shadow: 0px,0px,10px,0px;
-	height: 5px;
-}
 
 #question{
-	margin: 2em;
-	background-color: var(--backgroud-color);
-	color: #f1faee;
+	margin-bottom: 2em;
+	margin-left: 2.5em;
+	color: var(--text-color);
+	font-weight: bold;
 }
 
 .frame {
-	margin: 2em;
+	margin: 1em;
+	padding: 1em;
 	width: 100%;
 	height: 1empx;
 	color: var(--text-color);
 	background-color: white;
+	border-radius: 2em;
 }
 
 .frame:hover{
-	background-color: #a8dadc;
+	background-color: #F5DBCB;
     cursor: pointer;
 }
 
@@ -119,7 +118,7 @@ body{
         opacity: 0;
     }
     100%{
-        background-color: green;
+        background-color: #62A763;
     }
 }
 
@@ -128,6 +127,6 @@ body{
         opacity: 0;
     }
     100%{
-        background-color: red;
+        background-color: #E74B58;
     }
 }

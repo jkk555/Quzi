@@ -36,10 +36,16 @@ function showQue() {
     }
     else{
     question.innerHTML = "";
-    option1.innerHTML = "";
+    option1.innerHTML = "Zdobyłeś : "+correct_ans+"/5 punktów <br> Gratuluje !!!";
     option2.innerHTML = "";
     option3.innerHTML = "";
     option4.innerHTML = "";
+    option1.style.pointerEvents = "none";
+    option2.classList.remove("frame");
+    option3.classList.remove("frame");
+    option4.classList.remove("frame");
+
+
     which_que.innerHTML = "";
     next_que.classList.add("hidden");
     

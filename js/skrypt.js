@@ -42,6 +42,7 @@ function showQue() {
     option4.innerHTML = "";
     which_que.innerHTML = "";
     next_que.classList.add("hidden");
+    
     }
 }
 
